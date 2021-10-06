@@ -16,5 +16,10 @@ namespace View
         {
             InitializeComponent();
         }
+
+        private void btnFecharAutor_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -39,7 +39,10 @@ namespace View
             this.btnAlterSalvarUsuario = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btnAlterExcluirUsuario = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btnAlterUsuarioFechar = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.toolStrip2 = new System.Windows.Forms.ToolStrip();
+            this.btnAlterUsuarioBusca = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlterUsuario)).BeginInit();
+            this.toolStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvAlterUsuario
@@ -120,12 +123,37 @@ namespace View
             this.btnAlterUsuarioFechar.Size = new System.Drawing.Size(90, 25);
             this.btnAlterUsuarioFechar.TabIndex = 5;
             this.btnAlterUsuarioFechar.Values.Text = "Fechar";
+            this.btnAlterUsuarioFechar.Click += new System.EventHandler(this.btnAlterUsuarioFechar_Click);
+            // 
+            // toolStrip2
+            // 
+            this.toolStrip2.Dock = System.Windows.Forms.DockStyle.None;
+            this.toolStrip2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.toolStrip2.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnAlterUsuarioBusca});
+            this.toolStrip2.Location = new System.Drawing.Point(400, 26);
+            this.toolStrip2.Name = "toolStrip2";
+            this.toolStrip2.Size = new System.Drawing.Size(57, 25);
+            this.toolStrip2.TabIndex = 7;
+            this.toolStrip2.Text = "toolStrip2";
+            // 
+            // btnAlterUsuarioBusca
+            // 
+            this.btnAlterUsuarioBusca.BackColor = System.Drawing.SystemColors.Control;
+            this.btnAlterUsuarioBusca.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnAlterUsuarioBusca.Image = global::View.Properties.Resources.lupa;
+            this.btnAlterUsuarioBusca.ImageTransparentColor = System.Drawing.Color.Transparent;
+            this.btnAlterUsuarioBusca.Name = "btnAlterUsuarioBusca";
+            this.btnAlterUsuarioBusca.Size = new System.Drawing.Size(23, 22);
+            this.btnAlterUsuarioBusca.Text = "Search";
             // 
             // AlterUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(679, 613);
+            this.Controls.Add(this.toolStrip2);
             this.Controls.Add(this.btnAlterUsuarioFechar);
             this.Controls.Add(this.btnAlterExcluirUsuario);
             this.Controls.Add(this.btnAlterSalvarUsuario);
@@ -137,6 +165,8 @@ namespace View
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Alterar / Excluir Usuário";
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlterUsuario)).EndInit();
+            this.toolStrip2.ResumeLayout(false);
+            this.toolStrip2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -154,5 +184,7 @@ namespace View
         private System.Windows.Forms.DataGridViewTextBoxColumn colAlterEmailUsuario;
         private System.Windows.Forms.DataGridViewTextBoxColumn colAlterCelularUsuario;
         private System.Windows.Forms.DataGridViewTextBoxColumn colAlterNomeUsuario;
+        private System.Windows.Forms.ToolStrip toolStrip2;
+        private System.Windows.Forms.ToolStripButton btnAlterUsuarioBusca;
     }
 }

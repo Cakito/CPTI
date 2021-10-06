@@ -16,5 +16,10 @@ namespace View
         {
             InitializeComponent();
         }
+
+        private void btnAlterUsuarioFechar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

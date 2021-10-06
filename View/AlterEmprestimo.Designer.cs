@@ -30,17 +30,20 @@ namespace View
         private void InitializeComponent()
         {
             this.dgvAlterEmpr = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
-            this.txbAlterEmpr = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.lblAlterCpfEmpr = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.btnAlterSalvarEmpr = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.btnAlterExcluirEmpr = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.btnAlterEmprFechar = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.colAlterIdEmpr = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colAlterLivroEmpr = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colAlterCpfEmpr = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colAlterDataEmpr = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colAlterDataDevol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txbAlterEmpr = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.lblAlterCpfEmpr = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.btnAlterSalvarEmpr = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.btnAlterExcluirEmpr = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.btnAlterEmprFechar = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.btnAlterEmprBusca = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlterEmpr)).BeginInit();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvAlterEmpr
@@ -59,45 +62,6 @@ namespace View
             this.dgvAlterEmpr.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvAlterEmpr.Size = new System.Drawing.Size(704, 469);
             this.dgvAlterEmpr.TabIndex = 0;
-            // 
-            // txbAlterEmpr
-            // 
-            this.txbAlterEmpr.Location = new System.Drawing.Point(276, 34);
-            this.txbAlterEmpr.Name = "txbAlterEmpr";
-            this.txbAlterEmpr.Size = new System.Drawing.Size(212, 23);
-            this.txbAlterEmpr.TabIndex = 1;
-            // 
-            // lblAlterCpfEmpr
-            // 
-            this.lblAlterCpfEmpr.Location = new System.Drawing.Point(190, 37);
-            this.lblAlterCpfEmpr.Name = "lblAlterCpfEmpr";
-            this.lblAlterCpfEmpr.Size = new System.Drawing.Size(80, 20);
-            this.lblAlterCpfEmpr.TabIndex = 2;
-            this.lblAlterCpfEmpr.Values.Text = "Digite o CPF:";
-            // 
-            // btnAlterSalvarEmpr
-            // 
-            this.btnAlterSalvarEmpr.Location = new System.Drawing.Point(45, 581);
-            this.btnAlterSalvarEmpr.Name = "btnAlterSalvarEmpr";
-            this.btnAlterSalvarEmpr.Size = new System.Drawing.Size(121, 25);
-            this.btnAlterSalvarEmpr.TabIndex = 3;
-            this.btnAlterSalvarEmpr.Values.Text = "Salvar Alterações";
-            // 
-            // btnAlterExcluirEmpr
-            // 
-            this.btnAlterExcluirEmpr.Location = new System.Drawing.Point(207, 581);
-            this.btnAlterExcluirEmpr.Name = "btnAlterExcluirEmpr";
-            this.btnAlterExcluirEmpr.Size = new System.Drawing.Size(90, 25);
-            this.btnAlterExcluirEmpr.TabIndex = 4;
-            this.btnAlterExcluirEmpr.Values.Text = "Excluir";
-            // 
-            // btnAlterEmprFechar
-            // 
-            this.btnAlterEmprFechar.Location = new System.Drawing.Point(659, 581);
-            this.btnAlterEmprFechar.Name = "btnAlterEmprFechar";
-            this.btnAlterEmprFechar.Size = new System.Drawing.Size(90, 25);
-            this.btnAlterEmprFechar.TabIndex = 5;
-            this.btnAlterEmprFechar.Values.Text = "Fechar";
             // 
             // colAlterIdEmpr
             // 
@@ -128,11 +92,73 @@ namespace View
             this.colAlterDataDevol.Name = "colAlterDataDevol";
             this.colAlterDataDevol.Width = 150;
             // 
+            // txbAlterEmpr
+            // 
+            this.txbAlterEmpr.Location = new System.Drawing.Point(292, 34);
+            this.txbAlterEmpr.Name = "txbAlterEmpr";
+            this.txbAlterEmpr.Size = new System.Drawing.Size(212, 23);
+            this.txbAlterEmpr.TabIndex = 1;
+            // 
+            // lblAlterCpfEmpr
+            // 
+            this.lblAlterCpfEmpr.Location = new System.Drawing.Point(206, 37);
+            this.lblAlterCpfEmpr.Name = "lblAlterCpfEmpr";
+            this.lblAlterCpfEmpr.Size = new System.Drawing.Size(80, 20);
+            this.lblAlterCpfEmpr.TabIndex = 2;
+            this.lblAlterCpfEmpr.Values.Text = "Digite o CPF:";
+            // 
+            // btnAlterSalvarEmpr
+            // 
+            this.btnAlterSalvarEmpr.Location = new System.Drawing.Point(45, 581);
+            this.btnAlterSalvarEmpr.Name = "btnAlterSalvarEmpr";
+            this.btnAlterSalvarEmpr.Size = new System.Drawing.Size(121, 25);
+            this.btnAlterSalvarEmpr.TabIndex = 3;
+            this.btnAlterSalvarEmpr.Values.Text = "Salvar Alterações";
+            // 
+            // btnAlterExcluirEmpr
+            // 
+            this.btnAlterExcluirEmpr.Location = new System.Drawing.Point(207, 581);
+            this.btnAlterExcluirEmpr.Name = "btnAlterExcluirEmpr";
+            this.btnAlterExcluirEmpr.Size = new System.Drawing.Size(90, 25);
+            this.btnAlterExcluirEmpr.TabIndex = 4;
+            this.btnAlterExcluirEmpr.Values.Text = "Excluir";
+            // 
+            // btnAlterEmprFechar
+            // 
+            this.btnAlterEmprFechar.Location = new System.Drawing.Point(659, 581);
+            this.btnAlterEmprFechar.Name = "btnAlterEmprFechar";
+            this.btnAlterEmprFechar.Size = new System.Drawing.Size(90, 25);
+            this.btnAlterEmprFechar.TabIndex = 5;
+            this.btnAlterEmprFechar.Values.Text = "Fechar";
+            this.btnAlterEmprFechar.Click += new System.EventHandler(this.btnAlterEmprFechar_Click);
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
+            this.toolStrip1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnAlterEmprBusca});
+            this.toolStrip1.Location = new System.Drawing.Point(507, 32);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(26, 25);
+            this.toolStrip1.TabIndex = 7;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // btnAlterEmprBusca
+            // 
+            this.btnAlterEmprBusca.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnAlterEmprBusca.Image = global::View.Properties.Resources.lupa;
+            this.btnAlterEmprBusca.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnAlterEmprBusca.Name = "btnAlterEmprBusca";
+            this.btnAlterEmprBusca.Size = new System.Drawing.Size(23, 22);
+            // 
             // AlterEmprestimo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(794, 618);
+            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.btnAlterEmprFechar);
             this.Controls.Add(this.btnAlterExcluirEmpr);
             this.Controls.Add(this.btnAlterSalvarEmpr);
@@ -144,6 +170,8 @@ namespace View
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Alterar / Excluir Empréstimos";
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlterEmpr)).EndInit();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -162,5 +190,7 @@ namespace View
         private System.Windows.Forms.DataGridViewTextBoxColumn colAlterCpfEmpr;
         private System.Windows.Forms.DataGridViewTextBoxColumn colAlterDataEmpr;
         private System.Windows.Forms.DataGridViewTextBoxColumn colAlterDataDevol;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripButton btnAlterEmprBusca;
     }
 }

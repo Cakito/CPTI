@@ -37,7 +37,10 @@ namespace View
             this.btnAlterExcluirAutor = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btnAlterFecharAutor = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.txbAlterAutor = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.btnAlterAutorBusca = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAutor)).BeginInit();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvAutor
@@ -97,19 +100,41 @@ namespace View
             this.btnAlterFecharAutor.Size = new System.Drawing.Size(90, 25);
             this.btnAlterFecharAutor.TabIndex = 4;
             this.btnAlterFecharAutor.Values.Text = "Fechar";
+            this.btnAlterFecharAutor.Click += new System.EventHandler(this.btnAlterFecharAutor_Click);
             // 
             // txbAlterAutor
             // 
-            this.txbAlterAutor.Location = new System.Drawing.Point(156, 34);
+            this.txbAlterAutor.Location = new System.Drawing.Point(165, 34);
             this.txbAlterAutor.Name = "txbAlterAutor";
             this.txbAlterAutor.Size = new System.Drawing.Size(207, 23);
             this.txbAlterAutor.TabIndex = 5;
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
+            this.toolStrip1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnAlterAutorBusca});
+            this.toolStrip1.Location = new System.Drawing.Point(378, 32);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(26, 25);
+            this.toolStrip1.TabIndex = 7;
+            // 
+            // btnAlterAutorBusca
+            // 
+            this.btnAlterAutorBusca.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnAlterAutorBusca.Image = global::View.Properties.Resources.lupa;
+            this.btnAlterAutorBusca.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnAlterAutorBusca.Name = "btnAlterAutorBusca";
+            this.btnAlterAutorBusca.Size = new System.Drawing.Size(23, 22);
             // 
             // AlterAutor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(471, 557);
+            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.txbAlterAutor);
             this.Controls.Add(this.btnAlterFecharAutor);
             this.Controls.Add(this.btnAlterExcluirAutor);
@@ -121,6 +146,8 @@ namespace View
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Alterar / Excluir Autor";
             ((System.ComponentModel.ISupportInitialize)(this.dgvAutor)).EndInit();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -136,5 +163,7 @@ namespace View
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txbAlterAutor;
         private System.Windows.Forms.DataGridViewTextBoxColumn colAlterAu;
         private System.Windows.Forms.DataGridViewTextBoxColumn colAlterNomeAutor;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripButton btnAlterAutorBusca;
     }
 }

@@ -97,6 +97,7 @@ namespace View
             this.btnCancelAutor.Size = new System.Drawing.Size(90, 25);
             this.btnCancelAutor.TabIndex = 2;
             this.btnCancelAutor.Values.Text = "Cancelar";
+            this.btnCancelAutor.Click += new System.EventHandler(this.btnCancelAutor_Click);
             // 
             // CadAutor
             // 

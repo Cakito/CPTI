@@ -135,6 +135,7 @@ namespace View
             this.btnCancelLivro.Size = new System.Drawing.Size(90, 25);
             this.btnCancelLivro.TabIndex = 2;
             this.btnCancelLivro.Values.Text = "Cancelar";
+            this.btnCancelLivro.Click += new System.EventHandler(this.btnCancelLivro_Click);
             // 
             // CadLivro
             // 

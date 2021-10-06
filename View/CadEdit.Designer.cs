@@ -97,6 +97,7 @@ namespace View
             this.btnCancelEdit.Size = new System.Drawing.Size(90, 25);
             this.btnCancelEdit.TabIndex = 5;
             this.btnCancelEdit.Values.Text = "Cancelar";
+            this.btnCancelEdit.Click += new System.EventHandler(this.btnCancelEdit_Click);
             // 
             // CadEdit
             // 

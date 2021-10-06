@@ -30,14 +30,17 @@ namespace View
         private void InitializeComponent()
         {
             this.dgvEditora = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
+            this.colAlterIdEdit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colAlterNomeEdit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnAlterSalvarEdit = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btnAlterExcluirLivro = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btnAlterFechar = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.lblAlterEditora = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.txbAlterEditora = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.colAlterIdEdit = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colAlterNomeEdit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.btnAlterEditBusca = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEditora)).BeginInit();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvEditora
@@ -53,6 +56,18 @@ namespace View
             this.dgvEditora.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvEditora.Size = new System.Drawing.Size(404, 402);
             this.dgvEditora.TabIndex = 0;
+            // 
+            // colAlterIdEdit
+            // 
+            this.colAlterIdEdit.HeaderText = "ID";
+            this.colAlterIdEdit.Name = "colAlterIdEdit";
+            this.colAlterIdEdit.Width = 200;
+            // 
+            // colAlterNomeEdit
+            // 
+            this.colAlterNomeEdit.HeaderText = "Nome";
+            this.colAlterNomeEdit.Name = "colAlterNomeEdit";
+            this.colAlterNomeEdit.Width = 200;
             // 
             // btnAlterSalvarEdit
             // 
@@ -77,10 +92,11 @@ namespace View
             this.btnAlterFechar.Size = new System.Drawing.Size(78, 25);
             this.btnAlterFechar.TabIndex = 3;
             this.btnAlterFechar.Values.Text = "Fechar";
+            this.btnAlterFechar.Click += new System.EventHandler(this.btnAlterFechar_Click);
             // 
             // lblAlterEditora
             // 
-            this.lblAlterEditora.Location = new System.Drawing.Point(82, 39);
+            this.lblAlterEditora.Location = new System.Drawing.Point(81, 39);
             this.lblAlterEditora.Name = "lblAlterEditora";
             this.lblAlterEditora.Size = new System.Drawing.Size(97, 20);
             this.lblAlterEditora.TabIndex = 4;
@@ -88,28 +104,38 @@ namespace View
             // 
             // txbAlterEditora
             // 
-            this.txbAlterEditora.Location = new System.Drawing.Point(175, 36);
+            this.txbAlterEditora.Location = new System.Drawing.Point(184, 36);
             this.txbAlterEditora.Name = "txbAlterEditora";
             this.txbAlterEditora.Size = new System.Drawing.Size(199, 23);
             this.txbAlterEditora.TabIndex = 5;
             // 
-            // colAlterIdEdit
+            // toolStrip1
             // 
-            this.colAlterIdEdit.HeaderText = "ID";
-            this.colAlterIdEdit.Name = "colAlterIdEdit";
-            this.colAlterIdEdit.Width = 200;
+            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
+            this.toolStrip1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnAlterEditBusca});
+            this.toolStrip1.Location = new System.Drawing.Point(386, 34);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(26, 25);
+            this.toolStrip1.TabIndex = 7;
+            this.toolStrip1.Text = "toolStrip1";
             // 
-            // colAlterNomeEdit
+            // btnAlterEditBusca
             // 
-            this.colAlterNomeEdit.HeaderText = "Editora";
-            this.colAlterNomeEdit.Name = "colAlterNomeEdit";
-            this.colAlterNomeEdit.Width = 200;
+            this.btnAlterEditBusca.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnAlterEditBusca.Image = global::View.Properties.Resources.lupa;
+            this.btnAlterEditBusca.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnAlterEditBusca.Name = "btnAlterEditBusca";
+            this.btnAlterEditBusca.Size = new System.Drawing.Size(23, 22);
             // 
             // AlterEditora
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(473, 552);
+            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.txbAlterEditora);
             this.Controls.Add(this.lblAlterEditora);
             this.Controls.Add(this.btnAlterFechar);
@@ -121,6 +147,8 @@ namespace View
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Alterar / Excluir Editora";
             ((System.ComponentModel.ISupportInitialize)(this.dgvEditora)).EndInit();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -136,5 +164,7 @@ namespace View
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txbAlterEditora;
         private System.Windows.Forms.DataGridViewTextBoxColumn colAlterIdEdit;
         private System.Windows.Forms.DataGridViewTextBoxColumn colAlterNomeEdit;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripButton btnAlterEditBusca;
     }
 }

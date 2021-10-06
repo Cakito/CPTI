@@ -37,7 +37,10 @@ namespace View
             this.lblBuscarUsuario = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.txbBuscarUsuario = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.btnFecharUsuario = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.btnConsUsuarioBusca = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuario)).BeginInit();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvUsuario
@@ -88,7 +91,7 @@ namespace View
             // 
             // lblBuscarUsuario
             // 
-            this.lblBuscarUsuario.Location = new System.Drawing.Point(154, 24);
+            this.lblBuscarUsuario.Location = new System.Drawing.Point(166, 24);
             this.lblBuscarUsuario.Name = "lblBuscarUsuario";
             this.lblBuscarUsuario.Size = new System.Drawing.Size(49, 20);
             this.lblBuscarUsuario.TabIndex = 1;
@@ -96,7 +99,7 @@ namespace View
             // 
             // txbBuscarUsuario
             // 
-            this.txbBuscarUsuario.Location = new System.Drawing.Point(209, 21);
+            this.txbBuscarUsuario.Location = new System.Drawing.Point(221, 21);
             this.txbBuscarUsuario.Name = "txbBuscarUsuario";
             this.txbBuscarUsuario.Size = new System.Drawing.Size(262, 23);
             this.txbBuscarUsuario.TabIndex = 2;
@@ -108,12 +111,35 @@ namespace View
             this.btnFecharUsuario.Size = new System.Drawing.Size(90, 25);
             this.btnFecharUsuario.TabIndex = 3;
             this.btnFecharUsuario.Values.Text = "Fechar";
+            this.btnFecharUsuario.Click += new System.EventHandler(this.btnFecharUsuario_Click);
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
+            this.toolStrip1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnConsUsuarioBusca});
+            this.toolStrip1.Location = new System.Drawing.Point(486, 19);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(26, 25);
+            this.toolStrip1.TabIndex = 7;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // btnConsUsuarioBusca
+            // 
+            this.btnConsUsuarioBusca.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnConsUsuarioBusca.Image = global::View.Properties.Resources.lupa;
+            this.btnConsUsuarioBusca.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnConsUsuarioBusca.Name = "btnConsUsuarioBusca";
+            this.btnConsUsuarioBusca.Size = new System.Drawing.Size(23, 22);
             // 
             // ConsultarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(660, 624);
+            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.btnFecharUsuario);
             this.Controls.Add(this.txbBuscarUsuario);
             this.Controls.Add(this.lblBuscarUsuario);
@@ -123,6 +149,8 @@ namespace View
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Lista de Usuários";
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuario)).EndInit();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -138,5 +166,7 @@ namespace View
         private System.Windows.Forms.DataGridViewTextBoxColumn colEmail;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCelular;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnFecharUsuario;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripButton btnConsUsuarioBusca;
     }
 }

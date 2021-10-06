@@ -245,5 +245,11 @@
   <ItemGroup>
     <None Include="Resources\cadastrro.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book-in-library-with-open-textbook.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lupa.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

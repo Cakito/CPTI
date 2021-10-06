@@ -41,7 +41,10 @@ namespace View
             this.btnAlterSalvarLivro = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btnAlterExcluirLivro = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btnAlterLivroFechar = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.btnAlterLivroBusca = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLivro)).BeginInit();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvLivro
@@ -100,7 +103,7 @@ namespace View
             // 
             // lblAlterLivro
             // 
-            this.lblAlterLivro.Location = new System.Drawing.Point(200, 42);
+            this.lblAlterLivro.Location = new System.Drawing.Point(212, 42);
             this.lblAlterLivro.Name = "lblAlterLivro";
             this.lblAlterLivro.Size = new System.Drawing.Size(91, 20);
             this.lblAlterLivro.TabIndex = 1;
@@ -108,7 +111,7 @@ namespace View
             // 
             // txbAlterLivro
             // 
-            this.txbAlterLivro.Location = new System.Drawing.Point(294, 39);
+            this.txbAlterLivro.Location = new System.Drawing.Point(305, 39);
             this.txbAlterLivro.Name = "txbAlterLivro";
             this.txbAlterLivro.Size = new System.Drawing.Size(279, 23);
             this.txbAlterLivro.TabIndex = 2;
@@ -136,12 +139,35 @@ namespace View
             this.btnAlterLivroFechar.Size = new System.Drawing.Size(90, 25);
             this.btnAlterLivroFechar.TabIndex = 5;
             this.btnAlterLivroFechar.Values.Text = "Fechar";
+            this.btnAlterLivroFechar.Click += new System.EventHandler(this.btnAlterLivroFechar_Click);
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
+            this.toolStrip1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnAlterLivroBusca});
+            this.toolStrip1.Location = new System.Drawing.Point(587, 37);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(26, 25);
+            this.toolStrip1.TabIndex = 6;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // btnAlterLivroBusca
+            // 
+            this.btnAlterLivroBusca.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnAlterLivroBusca.Image = global::View.Properties.Resources.lupa;
+            this.btnAlterLivroBusca.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnAlterLivroBusca.Name = "btnAlterLivroBusca";
+            this.btnAlterLivroBusca.Size = new System.Drawing.Size(23, 22);
             // 
             // AlterLivro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(848, 619);
+            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.btnAlterLivroFechar);
             this.Controls.Add(this.btnAlterExcluirLivro);
             this.Controls.Add(this.btnAlterSalvarLivro);
@@ -153,6 +179,8 @@ namespace View
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Alterar / Excluir Livro";
             ((System.ComponentModel.ISupportInitialize)(this.dgvLivro)).EndInit();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -172,5 +200,7 @@ namespace View
         private System.Windows.Forms.DataGridViewTextBoxColumn colAlterEdicao;
         private System.Windows.Forms.DataGridViewTextBoxColumn colAlterEditora;
         private System.Windows.Forms.DataGridViewTextBoxColumn colAlterAutor;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripButton btnAlterLivroBusca;
     }
 }

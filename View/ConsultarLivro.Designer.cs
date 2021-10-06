@@ -39,7 +39,10 @@ namespace View
             this.lblBuscarLivro = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.txbBuscarLivro = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.btnFecharLivro = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.btnConsLivroBuscar = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLivro)).BeginInit();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvLivro
@@ -104,7 +107,7 @@ namespace View
             // 
             // lblBuscarLivro
             // 
-            this.lblBuscarLivro.Location = new System.Drawing.Point(235, 23);
+            this.lblBuscarLivro.Location = new System.Drawing.Point(246, 26);
             this.lblBuscarLivro.Name = "lblBuscarLivro";
             this.lblBuscarLivro.Size = new System.Drawing.Size(49, 20);
             this.lblBuscarLivro.TabIndex = 1;
@@ -112,7 +115,7 @@ namespace View
             // 
             // txbBuscarLivro
             // 
-            this.txbBuscarLivro.Location = new System.Drawing.Point(290, 23);
+            this.txbBuscarLivro.Location = new System.Drawing.Point(301, 23);
             this.txbBuscarLivro.Name = "txbBuscarLivro";
             this.txbBuscarLivro.Size = new System.Drawing.Size(265, 23);
             this.txbBuscarLivro.TabIndex = 2;
@@ -124,12 +127,36 @@ namespace View
             this.btnFecharLivro.Size = new System.Drawing.Size(90, 25);
             this.btnFecharLivro.TabIndex = 3;
             this.btnFecharLivro.Values.Text = "Fechar";
+            this.btnFecharLivro.Click += new System.EventHandler(this.btnFecharLivro_Click);
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
+            this.toolStrip1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnConsLivroBuscar});
+            this.toolStrip1.Location = new System.Drawing.Point(569, 21);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(26, 25);
+            this.toolStrip1.TabIndex = 7;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // btnConsLivroBuscar
+            // 
+            this.btnConsLivroBuscar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnConsLivroBuscar.Image = global::View.Properties.Resources.lupa;
+            this.btnConsLivroBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnConsLivroBuscar.Name = "btnConsLivroBuscar";
+            this.btnConsLivroBuscar.Size = new System.Drawing.Size(23, 22);
+            this.btnConsLivroBuscar.Text = "toolStripButton1";
             // 
             // ConsultarLivro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(857, 627);
+            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.btnFecharLivro);
             this.Controls.Add(this.txbBuscarLivro);
             this.Controls.Add(this.lblBuscarLivro);
@@ -139,6 +166,8 @@ namespace View
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Lista de Livros";
             ((System.ComponentModel.ISupportInitialize)(this.dgvLivro)).EndInit();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -156,5 +185,7 @@ namespace View
         private System.Windows.Forms.DataGridViewTextBoxColumn colTitulo;
         private System.Windows.Forms.DataGridViewTextBoxColumn colEdicao;
         private System.Windows.Forms.DataGridViewTextBoxColumn colAno;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripButton btnConsLivroBuscar;
     }
 }

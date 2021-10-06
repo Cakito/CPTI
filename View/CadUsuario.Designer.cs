@@ -41,7 +41,7 @@ namespace View
             this.txbEmail = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.txbNome = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.kryptonButton2 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.btnCadCancelarUsuario = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.gpbDadosPerfil.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -155,20 +155,21 @@ namespace View
             this.kryptonButton1.TabIndex = 1;
             this.kryptonButton1.Values.Text = "Confirmar";
             // 
-            // kryptonButton2
+            // btnCadCancelarUsuario
             // 
-            this.kryptonButton2.Location = new System.Drawing.Point(231, 322);
-            this.kryptonButton2.Name = "kryptonButton2";
-            this.kryptonButton2.Size = new System.Drawing.Size(90, 25);
-            this.kryptonButton2.TabIndex = 2;
-            this.kryptonButton2.Values.Text = "Cancelar";
+            this.btnCadCancelarUsuario.Location = new System.Drawing.Point(231, 322);
+            this.btnCadCancelarUsuario.Name = "btnCadCancelarUsuario";
+            this.btnCadCancelarUsuario.Size = new System.Drawing.Size(90, 25);
+            this.btnCadCancelarUsuario.TabIndex = 2;
+            this.btnCadCancelarUsuario.Values.Text = "Cancelar";
+            this.btnCadCancelarUsuario.Click += new System.EventHandler(this.btnCadCancelarUsuario_Click);
             // 
             // CadUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(687, 359);
-            this.Controls.Add(this.kryptonButton2);
+            this.Controls.Add(this.btnCadCancelarUsuario);
             this.Controls.Add(this.kryptonButton1);
             this.Controls.Add(this.gpbDadosPerfil);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -195,6 +196,6 @@ namespace View
         private ComponentFactory.Krypton.Toolkit.KryptonLabel lblNome;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel lblCpf;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton1;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton2;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btnCadCancelarUsuario;
     }
 }

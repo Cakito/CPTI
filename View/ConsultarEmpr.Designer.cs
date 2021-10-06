@@ -38,7 +38,10 @@ namespace View
             this.lblConsultaEmpr = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.txbBuscarEmpr = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.btnFecharEmpr = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.btnConsLivroBusca = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpr)).BeginInit();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvEmpr
@@ -97,7 +100,7 @@ namespace View
             // 
             // lblConsultaEmpr
             // 
-            this.lblConsultaEmpr.Location = new System.Drawing.Point(221, 24);
+            this.lblConsultaEmpr.Location = new System.Drawing.Point(231, 24);
             this.lblConsultaEmpr.Name = "lblConsultaEmpr";
             this.lblConsultaEmpr.Size = new System.Drawing.Size(49, 20);
             this.lblConsultaEmpr.TabIndex = 1;
@@ -105,7 +108,7 @@ namespace View
             // 
             // txbBuscarEmpr
             // 
-            this.txbBuscarEmpr.Location = new System.Drawing.Point(276, 21);
+            this.txbBuscarEmpr.Location = new System.Drawing.Point(286, 21);
             this.txbBuscarEmpr.Name = "txbBuscarEmpr";
             this.txbBuscarEmpr.Size = new System.Drawing.Size(255, 23);
             this.txbBuscarEmpr.TabIndex = 2;
@@ -117,12 +120,35 @@ namespace View
             this.btnFecharEmpr.Size = new System.Drawing.Size(90, 25);
             this.btnFecharEmpr.TabIndex = 3;
             this.btnFecharEmpr.Values.Text = "Fechar";
+            this.btnFecharEmpr.Click += new System.EventHandler(this.btnFecharEmpr_Click);
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
+            this.toolStrip1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnConsLivroBusca});
+            this.toolStrip1.Location = new System.Drawing.Point(544, 19);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(26, 25);
+            this.toolStrip1.TabIndex = 7;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // btnConsLivroBusca
+            // 
+            this.btnConsLivroBusca.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnConsLivroBusca.Image = global::View.Properties.Resources.lupa;
+            this.btnConsLivroBusca.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnConsLivroBusca.Name = "btnConsLivroBusca";
+            this.btnConsLivroBusca.Size = new System.Drawing.Size(23, 22);
             // 
             // ConsultarEmpr
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(805, 627);
+            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.btnFecharEmpr);
             this.Controls.Add(this.txbBuscarEmpr);
             this.Controls.Add(this.lblConsultaEmpr);
@@ -132,6 +158,8 @@ namespace View
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Lista de Empréstimos";
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpr)).EndInit();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -148,5 +176,7 @@ namespace View
         private System.Windows.Forms.DataGridViewTextBoxColumn colCpfEmpr;
         private System.Windows.Forms.DataGridViewTextBoxColumn colLivroEmpr;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnFecharEmpr;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripButton btnConsLivroBusca;
     }
 }

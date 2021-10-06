@@ -30,19 +30,17 @@ namespace View
         private void InitializeComponent()
         {
             this.gpbEmpr = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblTituloEmpr = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.txbTituloEmpr = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.mtbEmpr = new ComponentFactory.Krypton.Toolkit.KryptonMaskedTextBox();
             this.lblUsuCpfEmpr = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.mtbDataDevol = new System.Windows.Forms.MaskedTextBox();
             this.mtbDataEmpr = new System.Windows.Forms.MaskedTextBox();
             this.lblIdEmpr = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.lblDataDevol = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.lblDataEmpr = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.txbIdEmpr = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.btnCancelEmpr = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btnConfirmEmpr = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txbTituloEmpr = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.lblTituloEmpr = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.gpbEmpr.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,10 +51,8 @@ namespace View
             this.gpbEmpr.Controls.Add(this.txbTituloEmpr);
             this.gpbEmpr.Controls.Add(this.mtbEmpr);
             this.gpbEmpr.Controls.Add(this.lblUsuCpfEmpr);
-            this.gpbEmpr.Controls.Add(this.mtbDataDevol);
             this.gpbEmpr.Controls.Add(this.mtbDataEmpr);
             this.gpbEmpr.Controls.Add(this.lblIdEmpr);
-            this.gpbEmpr.Controls.Add(this.lblDataDevol);
             this.gpbEmpr.Controls.Add(this.lblDataEmpr);
             this.gpbEmpr.Controls.Add(this.txbIdEmpr);
             this.gpbEmpr.Location = new System.Drawing.Point(23, 23);
@@ -66,35 +62,51 @@ namespace View
             this.gpbEmpr.TabStop = false;
             this.gpbEmpr.Text = "Dados do Empréstimo";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.Location = new System.Drawing.Point(509, 105);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(66, 13);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "CPF inválido";
+            this.label1.Visible = false;
+            // 
+            // lblTituloEmpr
+            // 
+            this.lblTituloEmpr.Location = new System.Drawing.Point(44, 148);
+            this.lblTituloEmpr.Name = "lblTituloEmpr";
+            this.lblTituloEmpr.Size = new System.Drawing.Size(44, 20);
+            this.lblTituloEmpr.TabIndex = 20;
+            this.lblTituloEmpr.Values.Text = "Título:";
+            // 
+            // txbTituloEmpr
+            // 
+            this.txbTituloEmpr.Location = new System.Drawing.Point(91, 145);
+            this.txbTituloEmpr.Name = "txbTituloEmpr";
+            this.txbTituloEmpr.Size = new System.Drawing.Size(191, 23);
+            this.txbTituloEmpr.TabIndex = 19;
+            // 
             // mtbEmpr
             // 
-            this.mtbEmpr.Location = new System.Drawing.Point(92, 175);
+            this.mtbEmpr.Location = new System.Drawing.Point(459, 70);
             this.mtbEmpr.Name = "mtbEmpr";
             this.mtbEmpr.Size = new System.Drawing.Size(119, 23);
             this.mtbEmpr.TabIndex = 18;
             // 
             // lblUsuCpfEmpr
             // 
-            this.lblUsuCpfEmpr.Location = new System.Drawing.Point(10, 178);
+            this.lblUsuCpfEmpr.Location = new System.Drawing.Point(377, 73);
             this.lblUsuCpfEmpr.Name = "lblUsuCpfEmpr";
             this.lblUsuCpfEmpr.Size = new System.Drawing.Size(79, 20);
             this.lblUsuCpfEmpr.TabIndex = 17;
             this.lblUsuCpfEmpr.Values.Text = "Usuário CPF:";
             // 
-            // mtbDataDevol
-            // 
-            this.mtbDataDevol.Culture = new System.Globalization.CultureInfo("pt-BR");
-            this.mtbDataDevol.Location = new System.Drawing.Point(464, 131);
-            this.mtbDataDevol.Mask = "00/00/0000";
-            this.mtbDataDevol.Name = "mtbDataDevol";
-            this.mtbDataDevol.Size = new System.Drawing.Size(116, 20);
-            this.mtbDataDevol.TabIndex = 16;
-            this.mtbDataDevol.ValidatingType = typeof(System.DateTime);
-            // 
             // mtbDataEmpr
             // 
             this.mtbDataEmpr.Culture = new System.Globalization.CultureInfo("pt-BR");
-            this.mtbDataEmpr.Location = new System.Drawing.Point(464, 70);
+            this.mtbDataEmpr.Location = new System.Drawing.Point(459, 148);
             this.mtbDataEmpr.Mask = "00/00/0000";
             this.mtbDataEmpr.Name = "mtbDataEmpr";
             this.mtbDataEmpr.Size = new System.Drawing.Size(116, 20);
@@ -103,23 +115,15 @@ namespace View
             // 
             // lblIdEmpr
             // 
-            this.lblIdEmpr.Location = new System.Drawing.Point(61, 70);
+            this.lblIdEmpr.Location = new System.Drawing.Point(60, 70);
             this.lblIdEmpr.Name = "lblIdEmpr";
             this.lblIdEmpr.Size = new System.Drawing.Size(25, 20);
             this.lblIdEmpr.TabIndex = 14;
             this.lblIdEmpr.Values.Text = "ID:";
             // 
-            // lblDataDevol
-            // 
-            this.lblDataDevol.Location = new System.Drawing.Point(342, 131);
-            this.lblDataDevol.Name = "lblDataDevol";
-            this.lblDataDevol.Size = new System.Drawing.Size(116, 20);
-            this.lblDataDevol.TabIndex = 13;
-            this.lblDataDevol.Values.Text = "Data da Devolução:";
-            // 
             // lblDataEmpr
             // 
-            this.lblDataEmpr.Location = new System.Drawing.Point(337, 70);
+            this.lblDataEmpr.Location = new System.Drawing.Point(332, 148);
             this.lblDataEmpr.Name = "lblDataEmpr";
             this.lblDataEmpr.Size = new System.Drawing.Size(125, 20);
             this.lblDataEmpr.TabIndex = 12;
@@ -127,7 +131,7 @@ namespace View
             // 
             // txbIdEmpr
             // 
-            this.txbIdEmpr.Location = new System.Drawing.Point(92, 67);
+            this.txbIdEmpr.Location = new System.Drawing.Point(91, 67);
             this.txbIdEmpr.Name = "txbIdEmpr";
             this.txbIdEmpr.Size = new System.Drawing.Size(116, 23);
             this.txbIdEmpr.TabIndex = 11;
@@ -139,6 +143,7 @@ namespace View
             this.btnCancelEmpr.Size = new System.Drawing.Size(90, 25);
             this.btnCancelEmpr.TabIndex = 18;
             this.btnCancelEmpr.Values.Text = "Cancelar";
+            this.btnCancelEmpr.Click += new System.EventHandler(this.btnCancelEmpr_Click);
             // 
             // btnConfirmEmpr
             // 
@@ -147,32 +152,6 @@ namespace View
             this.btnConfirmEmpr.Size = new System.Drawing.Size(90, 25);
             this.btnConfirmEmpr.TabIndex = 17;
             this.btnConfirmEmpr.Values.Text = "Confirmar";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(113, 211);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 13);
-            this.label1.TabIndex = 19;
-            this.label1.Text = "CPF inválido";
-            this.label1.Visible = false;
-            // 
-            // txbTituloEmpr
-            // 
-            this.txbTituloEmpr.Location = new System.Drawing.Point(92, 114);
-            this.txbTituloEmpr.Name = "txbTituloEmpr";
-            this.txbTituloEmpr.Size = new System.Drawing.Size(191, 23);
-            this.txbTituloEmpr.TabIndex = 19;
-            // 
-            // lblTituloEmpr
-            // 
-            this.lblTituloEmpr.Location = new System.Drawing.Point(45, 117);
-            this.lblTituloEmpr.Name = "lblTituloEmpr";
-            this.lblTituloEmpr.Size = new System.Drawing.Size(44, 20);
-            this.lblTituloEmpr.TabIndex = 20;
-            this.lblTituloEmpr.Values.Text = "Título:";
             // 
             // CadEmpr
             // 
@@ -195,10 +174,8 @@ namespace View
         #endregion
 
         private System.Windows.Forms.GroupBox gpbEmpr;
-        private System.Windows.Forms.MaskedTextBox mtbDataDevol;
         private System.Windows.Forms.MaskedTextBox mtbDataEmpr;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel lblIdEmpr;
-        private ComponentFactory.Krypton.Toolkit.KryptonLabel lblDataDevol;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel lblDataEmpr;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txbIdEmpr;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnCancelEmpr;

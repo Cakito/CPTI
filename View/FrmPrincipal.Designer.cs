@@ -33,6 +33,8 @@ namespace View
             this.lblUsuarioLogado = new System.Windows.Forms.ToolStripStatusLabel();
             this.barraStatus = new System.Windows.Forms.StatusStrip();
             this.menuTop = new System.Windows.Forms.MenuStrip();
+            this.btnLogout = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.imCadastrar = new System.Windows.Forms.ToolStripMenuItem();
             this.imCadUsuario = new System.Windows.Forms.ToolStripMenuItem();
             this.imCadEmpr = new System.Windows.Forms.ToolStripMenuItem();
@@ -51,9 +53,9 @@ namespace View
             this.imVisuLivro = new System.Windows.Forms.ToolStripMenuItem();
             this.imVisuEdit = new System.Windows.Forms.ToolStripMenuItem();
             this.imVisuAutor = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnLogout = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.barraStatus.SuspendLayout();
             this.menuTop.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStripStatusLabel1
@@ -93,6 +95,24 @@ namespace View
             this.menuTop.Size = new System.Drawing.Size(1114, 27);
             this.menuTop.TabIndex = 1;
             this.menuTop.Text = "menuStrip1";
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.Location = new System.Drawing.Point(1024, 2);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(90, 25);
+            this.btnLogout.TabIndex = 2;
+            this.btnLogout.Values.Text = "Logout";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::View.Properties.Resources.book_in_library_with_open_textbook;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 30);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1114, 547);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
             // 
             // imCadastrar
             // 
@@ -158,35 +178,35 @@ namespace View
             // imAltUsuario
             // 
             this.imAltUsuario.Name = "imAltUsuario";
-            this.imAltUsuario.Size = new System.Drawing.Size(180, 24);
+            this.imAltUsuario.Size = new System.Drawing.Size(151, 24);
             this.imAltUsuario.Text = "Usuário";
             this.imAltUsuario.Click += new System.EventHandler(this.imAltUsuario_Click);
             // 
             // imAltEmpr
             // 
             this.imAltEmpr.Name = "imAltEmpr";
-            this.imAltEmpr.Size = new System.Drawing.Size(180, 24);
+            this.imAltEmpr.Size = new System.Drawing.Size(151, 24);
             this.imAltEmpr.Text = "Empréstimo";
             this.imAltEmpr.Click += new System.EventHandler(this.imAltEmpr_Click);
             // 
             // imAltLivro
             // 
             this.imAltLivro.Name = "imAltLivro";
-            this.imAltLivro.Size = new System.Drawing.Size(180, 24);
+            this.imAltLivro.Size = new System.Drawing.Size(151, 24);
             this.imAltLivro.Text = "Livro";
             this.imAltLivro.Click += new System.EventHandler(this.imAltLivro_Click);
             // 
             // imAltEdit
             // 
             this.imAltEdit.Name = "imAltEdit";
-            this.imAltEdit.Size = new System.Drawing.Size(180, 24);
+            this.imAltEdit.Size = new System.Drawing.Size(151, 24);
             this.imAltEdit.Text = "Editora";
             this.imAltEdit.Click += new System.EventHandler(this.imAltEdit_Click);
             // 
             // imAltAutor
             // 
             this.imAltAutor.Name = "imAltAutor";
-            this.imAltAutor.Size = new System.Drawing.Size(180, 24);
+            this.imAltAutor.Size = new System.Drawing.Size(151, 24);
             this.imAltAutor.Text = "Autor";
             this.imAltAutor.Click += new System.EventHandler(this.imAltAutor_Click);
             // 
@@ -238,25 +258,19 @@ namespace View
             this.imVisuAutor.Text = "Autor";
             this.imVisuAutor.Click += new System.EventHandler(this.imVisuAutor_Click);
             // 
-            // btnLogout
-            // 
-            this.btnLogout.Location = new System.Drawing.Point(1012, 39);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(90, 25);
-            this.btnLogout.TabIndex = 2;
-            this.btnLogout.Values.Text = "Logout";
-            // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1114, 602);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.barraStatus);
             this.Controls.Add(this.menuTop);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuTop;
+            this.MaximizeBox = false;
             this.Name = "FrmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sistema Gerenciador de Biblioteca";
@@ -265,6 +279,7 @@ namespace View
             this.barraStatus.PerformLayout();
             this.menuTop.ResumeLayout(false);
             this.menuTop.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -295,5 +310,6 @@ namespace View
         private System.Windows.Forms.ToolStripMenuItem imVisuEdit;
         private System.Windows.Forms.ToolStripMenuItem imVisuAutor;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnLogout;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

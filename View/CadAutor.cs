@@ -16,5 +16,10 @@ namespace View
         {
             InitializeComponent();
         }
+
+        private void btnCancelAutor_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
